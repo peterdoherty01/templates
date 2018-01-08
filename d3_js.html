@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html>
+<svg width="960" height="500"></svg>
+<head>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+
+<body>
+
+  <script>
+    // d3.select("body")
+    // d3.selectAll("block")
+    //
+    // var selection = d3.selectAll()
+    //     .attr // change attr of html nodes
+    //     .style // changes CSS
+    //     .append // add html elements inside HTML triangle
+    //
+    // d3.selectAll("p")
+    //   .text("hello")// add text to html tag
+
+    // key
+    d3.select("body")
+      .selectAll("p")
+      .data(["Hey, Peter", "Hey, there"])
+      .enter() // bind data to input selection
+      .append("p") // append one paragraph per one element of the array
+        .text(function (d) {return d} );
+
+  </script>
+
+</body>
